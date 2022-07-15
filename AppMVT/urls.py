@@ -4,5 +4,5 @@ from AppMVT.views import agrega_familiar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('agrega-familiar/', agrega_familiar),
+    path('agrega-familiar/<tipo_f>/<nombre>/<apellido>/<edad>/<estado>', agrega_familiar),
 ]
