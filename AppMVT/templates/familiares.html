@@ -8,5 +8,16 @@
 </head>
 <body>
     <h1>LISTA DE FAMILIARES</h1>
+    <ul>
+        
+        {% for familiar in lista_familiares  %}
+
+        <li>tipo: {{familiar.tipo_f}} nombre: {{familiar.nombre}} Apellido: {{familiar.apellido}} edad: {{familiar.edad}} estado: {{familiar.estado_f}}</li>      
+        
+            
+        {% endfor %}
+            
+
+    </ul>
 </body>
 </html>
