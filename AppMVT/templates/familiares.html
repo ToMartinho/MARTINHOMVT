@@ -12,8 +12,18 @@
         
         {% for familiar in lista_familiares  %}
 
-        <li>Tipo: <strong>{{familiar.tipo_f}}</strong> Nombre: <strong>{{familiar.nombre}}</strong> Apellido: <strong>{{familiar.apellido}}</strong> Edad: <strong>{{familiar.edad}}</strong> Estado: <strong>{{familiar.estado_f}}</strong></li>      
-        
+            <li>Tipo: <strong>{{familiar.tipo_f}}</strong> Nombre: <strong>{{familiar.nombre}}</strong> Apellido: <strong>{{familiar.apellido}}</strong> Edad: <strong>{{familiar.edad}}
+            
+            
+                {% if familiar.estado_f == "fallecido" %}
+            
+                Estado: <strong style="color: red">{{familiar.estado_f}}</strong>
+
+                {% else %}
+                Estado: <strong style="color: green">{{familiar.estado_f}}</strong>
+                {% endif %}
+                
+            </li>
             
         {% endfor %}
             
