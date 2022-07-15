@@ -12,3 +12,9 @@ def agrega_familiar(self, tipo_f, nombre, apellido, edad, estado_f):
     return HttpResponse(f"""
             <p>El familiar tipo: {familiar.tipo_f} con nombre y apellido: {familiar.nombre} {familiar.apellido} edad: {familiar.edad} y estado: {familiar.estado_f} se agrego a la DB</p>
     """)
+
+def lista_familiares(self):
+
+    lista_f = Familiares.objects.all()
+
+    return render(self, "familiares.html", {"lista_familiares": lista_f})
